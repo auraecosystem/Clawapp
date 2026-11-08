@@ -736,8 +736,9 @@ Real-time streaming chat, image send & receive, Markdown rendering, offline mess
 ---
 
 <p align="center">
-  由 <a href="https://qt.cool">晴辰云</a> 开发维护<br/>
-  <a href="https://claw.qt.cool">clawapp.qt.cool</a>
+  由 <a href="https://claw.qt.cool">晴辰云</a> 开发维护<br/>
+  
+  <a href="https://claw.saharaai.com">clawapp.saharaai.com</a>
 </p>
 
 ## License
