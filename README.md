@@ -478,4 +478,4 @@ Yes, if that server can securely reach an OpenClaw Gateway running elsewhere. Us
 
 ## License
 
-ClawApp is distributed under the MIT License. See the repository's LICENSE file for the full license text.
+ClawApp is distributed under the MIT License.
