@@ -1,3 +1,13 @@
+#!/bin/env zsh
+
+# 安装 pm2
+npm install -g pm2
+
+# 启动
+pm2 start server/index.js --name clawapp
+
+# 开机自启
+pm2 save && pm2 startup
 mkdir -p cftunnel-relay && cd cftunnel-relay
 curl -fsSLO https://raw.githubusercontent.com/qingchencloud/cftunnel/main/docker/relay-server/docker-compose.yml
 curl -fsSLO https://raw.githubusercontent.com/qingchencloud/cftunnel/main/docker/relay-server/frps.toml.example
@@ -9,3 +19,8 @@ cftunnel create my-tunnel                              # 创建隧道
 cftunnel add clawapp 3210 --domain chat.trycloudflare.com    # 添加路由（自动创建 DNS）
 cftunnel up                                            # 启动
 cftunnel install                                       # 注册开机自启
+cftunnel init --token <your-token> --account <account-id>
+cftunnel create my-tunnel
+cftunnel add myapp 3000 --domain app.example.com
+cftunnel up
+# 搞定！app.example.com → localhost:3000
