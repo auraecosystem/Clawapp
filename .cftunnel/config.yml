@@ -1,0 +1,32 @@
+version: 1
+
+# Cloud 模式配置
+auth:
+  api_token: "your-token"
+  account_id: "your-account-id"
+tunnel:
+  id: "tunnel-uuid"
+  name: "my-tunnel"
+  token: "tunnel-run-token"
+routes:
+  - name: myapp
+    hostname: app.trycloudflare.com
+    service: http://localhost:3000
+
+# Relay 模式配置（与 Cloud 模式独立共存）
+relay:
+  server: "1.2.3.4:7000"
+  token: "your-relay-token"
+  rules:
+    - name: minecraft
+      proto: tcp
+      local_port: 25565
+      remote_port: 25565
+    - name: game-voice
+      proto: udp
+      local_port: 9987
+      remote_port: 9987
+
+# 启动隧道时自动检查 cftunnel 更新
+self_update:
+  auto_check: true
